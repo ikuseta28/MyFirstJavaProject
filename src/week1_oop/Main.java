@@ -3,7 +3,7 @@ package week1_oop;
 public class Main {
         static void main(String[] args) {
 
-            BankAccount account1 = new BankAccount(1, 500);
+            BankAccount account1 = new BankAccount(1, 600);
             BankAccount account2 = new BankAccount(2, 1550);
             BankAccount account3 = new BankAccount(3, 650);
 
