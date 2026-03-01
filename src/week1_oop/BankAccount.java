@@ -1,15 +1,19 @@
 package week1_oop;
 
 public class BankAccount {
-    int accountNumber;
-    double balance;
+   private int accountNumber;
+   private double balance;
 
-    void deposit(double amount){
+   public BankAccount(int accountNumber, double balance){
+       this.accountNumber = accountNumber;
+       this.balance = balance;
+   }
+    public void deposit(double amount){
         balance += amount;
         System.out.println(amount + " deposited. Current balance: " + balance);
     }
 
-    void withdraw(double amount){
+    public void withdraw(double amount){
         if(amount <= balance){
             balance -= amount;
             System.out.println(amount + " withdrawn. Current balance: " + balance);
@@ -18,7 +22,14 @@ public class BankAccount {
             System.out.println("Insufficient funds!");
         }
     }
-    void showBalance(){
+    public void showBalance(){
         System.out.println("Account " + accountNumber + " has balance: " + balance);
+    }
+    public int getAccountNumber(){
+       return accountNumber;
+    }
+
+    public double getBalance(){
+       return balance;
     }
 }
